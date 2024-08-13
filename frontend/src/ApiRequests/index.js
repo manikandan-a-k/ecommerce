@@ -1,4 +1,4 @@
-const localDomain = "http://localhost:8080";
+const localDomain = "https://ecommerce-backend-5vj1.onrender.com";
 const ApiRequests = {
   signUp: {
     url: `${localDomain}/api/signup`,
