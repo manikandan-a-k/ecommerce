@@ -1,0 +1,33 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  
+}
+body{
+  background-color: #fff;
+  
+}
+/*AllUSers Table*/
+.userTable{
+  @apply bg-white
+}
+.userTable th{
+  @apply border border-slate-400 text-base font-medium p-2
+}
+.userTable td{
+  @apply border border-slate-200 text-base text-center p-1
+}
+
+
+/*Products Scroll Bar*/
+.products-scrollbar::-webkit-scrollbar{
+  display: none;
+}
