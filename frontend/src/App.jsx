@@ -20,7 +20,7 @@ import AllProducts from "./Pages/AllProducts.jsx";
 import ProductDetails from "./Pages/ProductDetails.jsx";
 import Cart from "./Pages/Cart.jsx";
 import SearchBar from "./Pages/SearchBar.jsx";
-axios.defaults.baseURL = "http://localhost:8080/api";
+axios.defaults.baseURL = "https://ecommerce-backend-5vj1.onrender.com/api";
 axios.defaults.withCredentials = true;
 function App() {
   const [addToCartCount,setAddToCartCount]=useState(0)
