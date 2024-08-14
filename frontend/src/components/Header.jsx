@@ -13,6 +13,7 @@ axios.defaults.withCredentials = true;
 
 const Header = () => {
   const user = useSelector((state) => state?.user?.user);
+  console.log(user)
   const dispatch = useDispatch();
   const [admin, setAdmin] = useState(false);
   const { addToCartCount } = useContext(Context);
