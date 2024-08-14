@@ -31,6 +31,7 @@ function App() {
       .then(({ data }) => {
         if (data.success) {
           disPatch(setUserDetails(data.data));
+          console.log(data)
         }
       })
       .catch((err) => console.log(err));
