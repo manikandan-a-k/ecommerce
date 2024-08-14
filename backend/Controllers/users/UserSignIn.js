@@ -19,7 +19,12 @@ const userLogin = async (req, res) => {
      const checkPassword=await bcrypt.compare(password,user.password)
      if(checkPassword){
       const token= await jwt.sign({email:user.email,id:user._id,name:user.name},process.env.SECRET_KEY,{expiresIn:"8hr"})
-      res.cookie("token",token).json({
+      res.cookie("token",token,{     
+  httpOnly: true,
+  secure: true, // Ensure this is true in production (requires HTTPS)
+  sameSite: 'None', // Allows cross-site requests
+ 
+      }).json({
         message:"Login Success",
         data:token,
         success:true,
