@@ -5,7 +5,7 @@ const addToCart=async(e,id)=>{
     e?.stopPropagation()
     e?.preventDefault()
 
-    await axios.post("api/addtocart",{
+    await axios.post("/addtocart",{
         productId:id
     }).then(({data})=>{
            console.log(data.data)
