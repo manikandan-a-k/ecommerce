@@ -16,7 +16,7 @@ const AllUsers = () => {
   })
 
 const fetchallUsers=async()=>{
-  await axios.get("/allUsers").then(({data})=>{
+  await axios.get("api/allUsers").then(({data})=>{
     if(data.success)
     {
       setAllUsers(data.data)
