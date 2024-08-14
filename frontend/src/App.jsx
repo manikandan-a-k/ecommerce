@@ -20,14 +20,14 @@ import AllProducts from "./Pages/AllProducts.jsx";
 import ProductDetails from "./Pages/ProductDetails.jsx";
 import Cart from "./Pages/Cart.jsx";
 import SearchBar from "./Pages/SearchBar.jsx";
-axios.defaults.baseURL = "https://ecommerce-backend-5vj1.onrender.com/api";
+axios.defaults.baseURL = "https://ecommerce-backend-5vj1.onrender.com/";
 axios.defaults.withCredentials = true;
 function App() {
   const [addToCartCount,setAddToCartCount]=useState(0)
   const disPatch = useDispatch();
   const fetchUser = async () => {
     axios
-      .get("/user")
+      .get("api/user")
       .then(({ data }) => {
         if (data.success) {
           disPatch(setUserDetails(data.data));
@@ -38,7 +38,7 @@ function App() {
   };
   const countAddToCartProducts = async () => {
     await axios
-      .get("/countaddtocartproducts")
+      .get("api/countaddtocartproducts")
       .then(({ data }) => {
         setAddToCartCount(data?.data?.count)
       })
