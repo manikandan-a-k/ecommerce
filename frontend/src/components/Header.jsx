@@ -24,7 +24,7 @@ const Header = () => {
   const navigate = useNavigate();
   const handleLogout = async () => {
     axios
-      .get("/userLogout")
+      .get("api/userLogout")
       .then(({ data }) => {
         if (data.success) {
           toast.success(data.message);
