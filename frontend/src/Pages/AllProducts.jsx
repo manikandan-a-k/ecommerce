@@ -6,7 +6,7 @@ const AllProducts = () => {
   const [openProduct,setOpenProduct]=useState(false)
   const [allProducts,setAllProducts]=useState([])
   const getProducts=async()=>{
-    await axios.get("/getProducts").then(({data})=>{
+    await axios.get("api/getProducts").then(({data})=>{
       
       setAllProducts(data?.data||[])
     }).catch((error)=>{
