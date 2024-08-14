@@ -14,7 +14,7 @@ const Role = ({
     const [userRole,setUserRole]=useState(role)
    
     const updateUserRole=async()=>{
-      await axios.post("api/updateUser",{
+      await axios.post("/api/updateUser",{
         role:userRole,
         userId:userId
       }).
