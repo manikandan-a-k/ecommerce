@@ -31,7 +31,7 @@ const ProductDetails = () => {
 
   const fetchProductDetails = async () => {
     await axios
-      .post("/product-details", {
+      .post("api/product-details", {
         productId,
       })
       .then(({ data }) => {
