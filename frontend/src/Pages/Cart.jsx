@@ -20,7 +20,7 @@ const Cart = () => {
   const [log,setLog]=useState(true)
   const fetchProducts = async () => {
     await axios
-      .get("api/viewaddtocardproducts")
+      .get("/api/viewaddtocardproducts")
       .then(({ data }) => {
         setLoading(true);
         if (data.success) {
